@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Статистика Приёмной Комиссии",
   description: "Статистика поданных заявлений абитуриентов в реальном времени",
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
     // apple: '/apple-icon.png',
   },  
   openGraph: {
