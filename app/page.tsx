@@ -26,6 +26,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
+  ChartConfig,
 } from "@/components/ui/chart";
 import {
   Bar,
@@ -146,7 +147,7 @@ function AdmissionsDashboard() {
       return {
         genderData: [],
         totalGender: 0,
-        chartConfigGender: {},
+        chartConfigGender: {} as ChartConfig,
       };
     }
 
@@ -559,7 +560,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Психология Очная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -648,7 +648,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Психология Очно-заочная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -737,7 +736,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Социальная работа Очная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -826,7 +824,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Социальная работа Заочная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -915,7 +912,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Юриспруденция Очная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -1006,7 +1002,6 @@ function AdmissionsDashboard() {
                   </Card>
                 </div>
               </TabsContent>
-
               {/* Магистратура */}
               <TabsContent value="master" className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1059,7 +1054,6 @@ function AdmissionsDashboard() {
                       </div>
                     </CardContent>
                   </Card>
-
                   {/* Менеджмент Заочная */}
                   <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm hover:shadow-md transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -1169,7 +1163,7 @@ function AdmissionsDashboard() {
                 </CardContent>
               </Card> 
             */}
-              
+
               {/* Radial Chart - Stacked для распределения по полу 
               <Card className="bg-card/70 backdrop-blur-md border-border/50 shadow-sm overflow-hidden">
                 <CardHeader className="space-y-0 flex flex-row items-start justify-between pb-4 ">
@@ -1399,7 +1393,7 @@ function AdmissionsDashboard() {
                         cy="50%"
                         labelLine={false}
                         label={({ name, percent }) =>
-                          `${name} ${(percent * 100).toFixed(0)}%`
+                          `${name} ${percent ? (percent * 100).toFixed(0) : 0}%`
                         }
                         outerRadius={75}
                         innerRadius={45}
