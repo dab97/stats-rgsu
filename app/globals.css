@@ -75,18 +75,8 @@
   }
   body {
     @apply bg-background text-foreground;
-  }
-}
-
-@layer utilities {
-  .font-bebasregular {
-    font-family: "BebasNeue-Regular", system-ui, sans-serif;
-  }
-
-  .font-bebasbold {
-    font-family: "BebasNeueBold", system-ui, sans-serif;
-  }
-  .font-angst {
-    font-family: "Angst", system-ui, sans-serif;
+    h1 {
+      font-family: BebasNeue, sans-serif;
+    }
   }
 }

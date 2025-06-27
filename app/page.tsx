@@ -34,7 +34,7 @@ interface ApplicationStats {
 }
 
 // Константы
-const ADMISSION_PLAN = {
+const ADMISSION_PLAN = {  
   "Магистратура_Психология_Очно-заочная_Платно": 15,
   "Магистратура_Менеджмент_Заочная_Платно": 15,
   "Бакалавриат_Психология_Очная_Бюджет": 10,
@@ -304,7 +304,7 @@ function AdmissionsDashboard() {
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
                 <div className="text-center">
-                  <h1 className="text-2xl md:text-4xl font-bold text-foreground mb-1">Приёмная Комиссия 2025</h1>
+                  <h1 className="text-2xl md:text-6xl font-bold text-muted-foreground mb-1">Приёмная Комиссия 2025</h1>
                   <p className="text-sm md:text-lg text-primary font-semibold text-center px-4">
                     Российский Государственный Социальный Университет в г. Минске
                   </p>
